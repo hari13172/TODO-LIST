@@ -1,0 +1,34 @@
+step1: node v:22
+
+
+step1.1: need to run the node using "command -- docker run node:22" 
+--if it fails run command using (-it(interactive terminal)) -- docker run -it node:22
+
+
+step2: Need to copy entire project inside the container
+command: COPY . /website
+command: WORKDIR /website
+
+
+step3: npm install
+command: RUN npm install 
+
+
+
+step4:npm run dev
+command: CMD ["npm", "run", "dev"]
+
+
+#build image
+command: docker build -t <image-name /> .
+
+step5: port expose
+command:docker run -p port:port animate 
+
+
+-- . :mentions the exact Dokerfile where it located
+
+
+
+
+
